@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+title: "HP-Victus-Audio-Kernel-Crash"
+message: "If you use this repository for research or technical investigation, please cite it using the metadata below."
+type: software
+
+authors:
+  - family-names: "MSEB00"
+
+repository-code: "https://github.com/MSEB00/HP-Victus-Audio-Kernel-Crash"
+
+license: MIT
+
+abstract: >
+  Engineering investigation into a reproducible Windows kernel crash
+  involving audio endpoint transitions on HP Victus laptops.
+  Includes WinDbg analysis, Reliability Monitor evidence,
+  driver information, PowerShell diagnostic scripts,
+  and reproducible test procedures.
+
+keywords:
+  - Windows
+  - HP Victus
+  - Kernel
+  - BSOD
+  - BugCheck 0x139
+  - BugCheck 0x3B
+  - WinDbg
+  - Audio
+  - Realtek
+  - AMD ACP
+  - Valorant
+  - Riot Vanguard
+  - Driver
+  - Investigation
+
+version: "1.0"
+
+date-released: "2026-06-29"
+url: "https://github.com/MSEB00/HP-Victus-Audio-Kernel-Crash"
