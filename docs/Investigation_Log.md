@@ -475,9 +475,9 @@ This remains a working hypothesis and will be revised as additional evidence bec
 
 # Changelog
 
-| Date      | Update                          |
-| --------- | ------------------------------- |
-| June 2026 | Investigation initiated         |
-| June 2026 | First WinDbg analysis completed |
-| June 2026 | Reproduction sequence confirmed |
-| June 2026 | Repository created              |
+| Date      | Update                             |
+| --------- | ---------------------------------- |
+| 24 June 2026 | Investigation initiated         |
+| 24 June 2026 | First WinDbg analysis completed |
+| 26 June 2026 | Reproduction sequence confirmed |
+| 29 June 2026 | Repository created              |
