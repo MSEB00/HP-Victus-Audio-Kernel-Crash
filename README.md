@@ -252,33 +252,41 @@ The kernel timer subsystem appears to detect previously corrupted memory rather 
 # Repository Structure
 
 ```
-docs/
-    Technical_Report.md
-    Investigation_Log.md
-    WinDbg_Analysis.md
-    Timeline.md
-
-dumps/
-    Crash dump archive
-    WinDbg outputs
-
-logs/
-    Reliability Monitor
-    Event Viewer
-    CBS
-    DISM
-
-drivers/
-    Driver versions
-    Driver inventory
-
-screenshots/
-    Reliability Monitor
-    Event Viewer
-    WinDbg
-
-scripts/
-    Diagnostic collection scripts
+HP-Victus-Audio-Kernel-Crash
+│
+├── .github
+│   ├── ISSUE_TEMPLATE
+│   │   ├── bug_report.md
+│   │   ├── investigation_report.md
+│   │   └── solution_report.md
+│   │
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── CODEOWNERS
+│
+├── artifacts
+│   ├── dism
+│   ├── drivers
+│   ├── dump-files
+│   ├── reliability-monitor
+│   └── windbg
+│
+├── docs
+│   ├── Investigation_Log.md
+│   ├── Reproduction.md
+│   ├── Technical_Report.md
+│   ├── Timeline.md
+│   ├── WinDbg_Analysis.md
+│   └── README.md
+│
+├── scripts
+│
+├── README.md
+├── LICENSE
+├── SECURITY.md
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── CITATION.cff
+└── .gitignore
 ```
 
 ---
