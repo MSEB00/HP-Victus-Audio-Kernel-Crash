@@ -1,0 +1,60 @@
+# Windows
+
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+
+*.tmp
+*.temp
+*.bak
+*.old
+
+# Logs
+
+*.log
+
+# Crash dumps
+
+*.DMP
+*.dmp
+MEMORY.DMP
+
+# Archives
+
+*.zip
+*.7z
+*.rar
+
+# Visual Studio Code
+
+.vscode/
+
+# JetBrains
+
+.idea/
+
+# Python
+
+**pycache**/
+*.pyc
+
+# PowerShell
+
+*.ps1xml
+
+# Git
+
+*.orig
+
+# Operating system files
+
+ehthumbs.db
+
+# Large diagnostics
+
+*.etl
+
+# Keep cloud-hosted dumps external
+
+artifacts/dump-files/*.zip
