@@ -336,3 +336,14 @@ Further analysis using private symbols and Driver Verifier would be required to 
 **Status:** Active
 
 The investigation remains ongoing. New crash dumps, additional reproduction scenarios, updated driver versions, and future findings will be appended to this timeline as they become available.
+
+### 2026-06-29 — Weekly Reliability Review
+
+Evidence:
+- artifacts/reliability-monitor/rm-weekly-overview.png
+
+Summary:
+The weekly Reliability Monitor view shows repeated BugCheck events on 24-Jun, 26-Jun, and 28-Jun, followed by a stable period on 29-Jun with no additional failures recorded.
+
+Assessment:
+The system remained stable following the latest BugCheck. Additional testing under the original reproduction conditions is planned to determine whether the issue remains reproducible.
