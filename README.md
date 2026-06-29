@@ -1,12 +1,4 @@
-![License](https://img.shields.io/badge/license-MIT-blue)
-
-![Platform](https://img.shields.io/badge/platform-Windows%2011-blue)
-
-![Status](https://img.shields.io/badge/status-Investigation-orange)
-
-![BugCheck](https://img.shields.io/badge/BugCheck-0x139-red)
-
-![WinDbg](https://img.shields.io/badge/WinDbg-Analyzed-success)
+![License](https://img.shields.io/badge/license-MIT-blue)        ![Platform](https://img.shields.io/badge/platform-Windows%2011-blue)        ![Status](https://img.shields.io/badge/status-Investigation-orange)        ![BugCheck](https://img.shields.io/badge/BugCheck-0x139-red)        ![WinDbg](https://img.shields.io/badge/WinDbg-Analyzed-success)
 
 # HP-Victus-Audio-Kernel-Crash
 Technical documentation of a reproducible Windows kernel crash involving audio endpoint transitions on HP Victus laptops. Repository includes evidence, WinDbg analysis, driver details, crash dumps, logs, and troubleshooting to assist HP, AMD, Microsoft, and the community.
