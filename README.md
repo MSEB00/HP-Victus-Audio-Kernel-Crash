@@ -1,6 +1,16 @@
-![License](https://img.shields.io/badge/license-MIT-blue)        ![Platform](https://img.shields.io/badge/platform-Windows%2011-blue)        ![Status](https://img.shields.io/badge/status-Investigation-orange)        ![BugCheck](https://img.shields.io/badge/BugCheck-0x139-red)        ![WinDbg](https://img.shields.io/badge/WinDbg-Analyzed-success)        **Version:** v1.0.0  
-**Status:** 🟡 Active Investigation  
-**License:** MIT  
+# HP Victus Audio Kernel Crash Investigation
+
+![Version](https://img.shields.io/badge/version-v1.0.0-blue)
+![Status](https://img.shields.io/badge/status-Investigating-orange)
+![Platform](https://img.shields.io/badge/platform-Windows%2011-0078D6)
+![BugCheck](https://img.shields.io/badge/BugCheck-0x139-red)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Issues](https://img.shields.io/github/issues/MSEB00/HP-Victus-Audio-Kernel-Crash)
+![Last Commit](https://img.shields.io/github/last-commit/MSEB00/HP-Victus-Audio-Kernel-Crash)
+![WinDbg](https://img.shields.io/badge/WinDbg-Analyzed-success)
+![Crash Dumps](https://img.shields.io/badge/Crash_Dumps-7-blueviolet)
+![Reproducible](https://img.shields.io/badge/Reproducible-Yes-brightgreen)
+![Evidence](https://img.shields.io/badge/Evidence-Available-success)
 
 # HP-Victus-Audio-Kernel-Crash
 Technical documentation of a reproducible Windows kernel crash involving audio endpoint transitions on HP Victus laptops. Repository includes evidence, WinDbg analysis, driver details, crash dumps, logs, and troubleshooting to assist HP, AMD, Microsoft, and the community.
@@ -11,6 +21,7 @@ Technical documentation of a reproducible Windows kernel crash involving audio e
 > Engineering investigation into a reproducible Windows kernel crash triggered by 3.5 mm audio endpoint transitions during gaming on an HP Victus 15-fb0xxx laptop.
 
 ---
+
 
 ## Overview
 
