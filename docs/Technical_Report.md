@@ -294,6 +294,8 @@ Reliability Monitor confirms repeated unexpected Windows shutdowns corresponding
 
 No application-level exception precedes the bugcheck.
 
+The weekly Reliability Monitor view illustrates the progression of the investigation. Three kernel BugCheck events were recorded over the investigation period (24-Jun, 26-Jun, and 28-Jun), followed by a recovery in the system stability index. As of 29-Jun-2026, no additional Windows failures have been recorded, although further stress testing is required before concluding that the issue has been resolved.
+
 ---
 
 # 12. Event Viewer
