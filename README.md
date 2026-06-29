@@ -12,16 +12,72 @@
 ![Reproducible](https://img.shields.io/badge/Reproducible-Yes-brightgreen)
 ![Evidence](https://img.shields.io/badge/Evidence-Available-success)
 
-# HP-Victus-Audio-Kernel-Crash
-Technical documentation of a reproducible Windows kernel crash involving audio endpoint transitions on HP Victus laptops. Repository includes evidence, WinDbg analysis, driver details, crash dumps, logs, and troubleshooting to assist HP, AMD, Microsoft, and the community.
+**Repository Version:** v1.0.0  
+**Last Updated:** 29 June 2026
 
+---
 
-# HP Victus Audio Kernel Crash Investigation
+> [!IMPORTANT]
+> **Current Status**
+>
+>| Item | Status |
+>|------|--------|
+>| Investigation | 🟡 Active |
+>| Reproducible | ✅ Yes |
+>| Multiple Dumps | ✅ Yes |
+>| WinDbg Analysis | ✅ Complete |
+>| Root Cause | ❌ Not Yet Confirmed |
+>| Community Reports | ⏳ Pending |
+
+---
+
+## Project Metrics
+
+| Metric | Value |
+|--------|------:|
+| Kernel Dumps Collected | 7 |
+| BugCheck Signatures | 2 |
+| Driver Families Investigated | 4 |
+| Investigation Documents | 6 |
+| Diagnostic Scripts | Multiple |
+| Reproduction Status | Confirmed |
+
+---
+
+## Disclaimer
+
+This repository is an independent engineering investigation.
+
+The observations, analyses, and hypotheses documented here are based on publicly available debugging information, crash dumps, and reproducible testing.
+
+References to HP, AMD, Microsoft, Riot Games, Realtek, NVIDIA, or other vendors do not imply responsibility unless confirmed by the respective vendor.
+
+Technical documentation of a reproducible Windows kernel crash involving audio endpoint transitions on HP Victus laptops.  includes evidence, WinDbg analysis, driver details, crash dumps, logs, and troubleshooting to assist HP, AMD, Microsoft, and the community.
+
 
 > Engineering investigation into a reproducible Windows kernel crash triggered by 3.5 mm audio endpoint transitions during gaming on an HP Victus 15-fb0xxx laptop.
 
 ---
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Repository Status](#repository-status)
+- [System Information](#system-information)
+- [Driver Versions](#driver-versions)
+- [Symptoms](#symptoms)
+- [Crash History](#crash-history)
+- [Reproduction](#reproduction)
+- [Troubleshooting Performed](#troubleshooting-performed)
+- [Current Findings](#current-findings)
+- [Current Hypothesis](#current-hypothesis)
+- [Repository Structure](#repository-structure)
+- [Contribution](#contribution)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
+
+---
 
 ## Overview
 
@@ -44,19 +100,64 @@ The goal is to assist HP, AMD, Microsoft, Riot Games, Realtek, and the community
 
 ---
 
-# Repository Status
+## Documentation
 
-**Status:** Under Investigation
-
-**Reproducibility:** Reproducible
-
-**Current Root Cause:** Unknown
-
-**Primary Suspected Area:**
-
-Windows Audio Stack during wired audio endpoint transitions under gaming workload.
+| Document | Description |
+|----------|-------------|
+| [docs/Technical_Report.md](https://github.com/MSEB00/HP-Victus-Audio-Kernel-Crash/blob/main/docs/Technical_Report.md) | Complete technical investigation |
+| [docs/WinDbg_Analysis.md](https://github.com/MSEB00/HP-Victus-Audio-Kernel-Crash/blob/main/docs/WinDbg_Analysis.md) | WinDbg crash analysis |
+| [docs/Investigation_Log.md](https://github.com/MSEB00/HP-Victus-Audio-Kernel-Crash/blob/main/docs/Investigation_Log.md) | Investigation history |
+| [docs/Reproduction.md](https://github.com/MSEB00/HP-Victus-Audio-Kernel-Crash/blob/main/docs/Reproduction.md) | Reproduction procedure |
+| [docs/Solution_Report.md](https://github.com/MSEB00/HP-Victus-Audio-Kernel-Crash/blob/main/docs/Solution_Report.md) | Solutions and workarounds |
+| [docs/Timeline.md](https://github.com/MSEB00/HP-Victus-Audio-Kernel-Crash/blob/main/docs/Timeline.md) | Investigation timeline |
 
 ---
+
+## Investigation Flow
+```
+Symptom
+    │
+    ▼
+Evidence Collection
+    │
+    ▼
+Reproduction
+    │
+    ▼
+WinDbg Analysis
+    │
+    ▼
+Working Hypothesis
+    │
+    ▼
+Community Investigation
+    │
+    ▼
+Vendor Investigation
+    │
+    ▼
+Solution
+```
+
+---
+
+## Repository Status
+
+| Item | Status |
+|------|--------|
+| Investigation | 🟡 Active |
+| Reproducibility | ✅ Confirmed |
+| Root Cause | ❌ Unknown |
+| Primary Suspected Area | Windows Audio Stack during wired audio endpoint transitions under gaming workload |
+
+---
+
+# Community Reproduction
+
+| Device | Windows Build | Status |
+|---------|---------------|--------|
+| HP Victus 15-fb0xxx | 26100.8737 | ✅ Confirmed |
+| Community Reports | Pending | ⏳ |
 
 # System Information
 
@@ -75,53 +176,38 @@ Windows Audio Stack during wired audio endpoint transitions under gaming workloa
 
 ## Realtek HD Audio
 
-Version
-
-6.0.9692.1
-
-Driver
-
-RTKVHD64.sys
-
-Timestamp
-
-04-Jun-2024
+| Component | Value |
+|-----------|-------|
+| Driver | RTKVHD64.sys |
+| Version | 6.0.9692.1 |
+| Timestamp | 04-Jun-2024 |
 
 ---
 
 ## AMD Audio Device
 
-Version
-
-6.0.1.44
+| Component | Value |
+|-----------|-------|
+| Driver | AMD Audio Device |
+| Version | 6.0.1.44 |
 
 ---
 
 ## AMD ACP Bus Driver
 
-Driver
-
-amdacpbus.sys
-
-Version
-
-6.0.1.85
-
-Timestamp
-
-02-Apr-2026
-
+| Component | Value |
+|-----------|-------|
+| Driver | amdacpbus.sys |
+| Version | 6.0.1.85 |
+| Timestamp | 02-Apr-2026 |
 ---
 
 ## Microsoft Components
 
-PortCls.sys
-
-10.0.26100.8737
-
-HDAudBus.sys
-
-10.0.26100.8521
+| Component | Version |
+|-----------|---------|
+| PortCls.sys | 10.0.26100.8737 |
+| HDAudBus.sys | 10.0.26100.8521 |
 
 ---
 
@@ -165,47 +251,11 @@ Notably, Windows remains responsive immediately after the game freezes, suggesti
 
 Multiple crash dumps have been collected.
 
-## Crash A
-
-BugCheck
-
-SYSTEM_SERVICE_EXCEPTION (0x3B)
-
-Faulting Process
-
-audiodg.exe
-
-Faulting Module
-
-amdacpbus.sys
-
-Failure Bucket
-
-AV_amdacpbus
-
----
-
-## Crash B
-
-BugCheck
-
-KERNEL_SECURITY_CHECK_FAILURE (0x139)
-
-Failure Bucket
-
-0x139_3_CORRUPT_LIST_ENTRY_KTIMER_LIST_CORRUPTION_nt!KiProcessExpiredTimerList
-
----
-
-## Crash C
-
-Same failure signature as Crash B.
-
-Failure Hash
-
-```
-{9db7945b-255d-24a1-9f2c-82344e883ab8}
-```
+| Dump | BugCheck | Result |
+|------|----------|--------|
+| Crash A | 0x3B | SYSTEM_SERVICE_EXCEPTION |
+| Crash B | 0x139 | KERNEL_SECURITY_CHECK_FAILURE |
+| Crash C | 0x139 | Same failure bucket |
 
 ---
 
@@ -261,6 +311,37 @@ Crash dump analysis consistently indicates:
 * MMDevAPI endpoint activity reported by BlackBoxPnP
 
 The kernel timer subsystem appears to detect previously corrupted memory rather than being the origin of the corruption.
+
+---
+
+## Current Hypothesis
+
+Based on the evidence collected so far:
+
+- Audio endpoint transitions consistently precede the crash.
+- Multiple kernel dumps produce the same BugCheck 0x139 signature.
+- An earlier dump implicated `amdacpbus.sys` during audio processing.
+- The issue has not yet been conclusively attributed to a specific driver or vendor.
+
+This remains a working hypothesis and is subject to revision as new evidence becomes available.
+
+# Known Workarounds
+
+| Workaround | Status |
+|------------|--------|
+| Bluetooth headset | ⚠️ Avoids jack transitions but introduces latency |
+| Avoid unplugging/replugging during gameplay | ⚠️ Partial workaround |
+| Permanent fix | ❌ None identified |
+
+# Vendor Status
+
+| Vendor | Status |
+|--------|--------|
+| HP | Not Contacted |
+| AMD | Not Contacted |
+| Microsoft | Not Contacted |
+| Riot Games | Not Contacted |
+| Realtek | Not Contacted |
 
 ---
 
@@ -321,14 +402,6 @@ If you have experienced a similar issue, please consider opening an Issue with:
 * Event Viewer logs
 
 Additional evidence helps determine whether this issue affects a broader range of HP Victus or AMD ACP platforms.
-
----
-
-# Disclaimer
-
-This repository documents observed behavior and debugging results.
-
-No conclusions are made regarding the responsibility of any specific vendor. Any references to drivers or software are based solely on publicly available crash dump analysis and observed system behavior.
 
 ---
 
