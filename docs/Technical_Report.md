@@ -37,11 +37,12 @@ This report documents the observed behavior, collected evidence, troubleshooting
 11. Reliability Monitor Evidence
 12. Event Viewer Evidence
 13. Troubleshooting Performed
-14. Technical Assessment
-15. Current Hypothesis
-16. Open Questions
-17. Future Investigation
-18. References
+14. Hardware Dignostics
+15. Technical Assessment
+16. Current Hypothesis
+17. Open Questions
+18. Future Investigation
+19. References
 
 ---
 
@@ -332,7 +333,7 @@ The following corrective actions were attempted.
 - Event Viewer
 - WinDbg analysis
 
-### Hardware Diagnostics
+# 14. Hardware Diagnostics
 
 On **2026-07-01**, HP UEFI Hardware Diagnostics (version 10.8.5.0) was executed to verify whether the issue was caused by defective hardware.
 
@@ -359,7 +360,7 @@ None permanently resolved the issue.
 
 ---
 
-# 14. Technical Assessment
+# 15. Technical Assessment
 
 Based solely on collected evidence, the failure appears associated with the Windows audio endpoint transition path during an active gaming workload.
 
@@ -375,7 +376,7 @@ No single component can currently be identified as the definitive source of the 
 
 ---
 
-# 15. Current Hypothesis
+# 16. Current Hypothesis
 
 The collected evidence suggests the following sequence:
 
@@ -408,7 +409,7 @@ This represents a working hypothesis only and is subject to revision as addition
 
 ---
 
-# 16. Open Questions
+# 17. Open Questions
 
 * Is the corruption introduced by the AMD ACP driver?
 * Is the corruption introduced by Realtek's miniport driver?
@@ -418,7 +419,7 @@ This represents a working hypothesis only and is subject to revision as addition
 
 ---
 
-# 17. Future Investigation
+# 18. Future Investigation
 
 Planned tasks include:
 
@@ -432,7 +433,7 @@ Planned tasks include:
 
 ---
 
-# 18. References
+# 19. References
 
 * Windows Reliability Monitor
 * Windows Event Viewer
