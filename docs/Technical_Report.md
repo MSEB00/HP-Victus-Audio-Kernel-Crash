@@ -323,6 +323,38 @@ The following corrective actions were attempted.
 * Overlay enabled/disabled testing
 * WinDbg crash analysis
 
+### Software Diagnostics
+- Windows Update verification
+- SFC
+- DISM
+- Driver reinstallation
+- Reliability Monitor
+- Event Viewer
+- WinDbg analysis
+
+### Hardware Diagnostics
+
+On **2026-07-01**, HP UEFI Hardware Diagnostics (version 10.8.5.0) was executed to verify whether the issue was caused by defective hardware.
+
+The following diagnostics completed successfully:
+
+| Test | Result |
+|------|--------|
+| CPU Test | ✅ Pass |
+| Memory Extensive Test | ✅ Pass |
+| NVMe SMART Check | ✅ Pass |
+| Optimized Drive Self-Test (DST) | ✅ Pass |
+| Short Drive Self-Test (DST) | ✅ Pass |
+| Long Drive Self-Test (DST) | ✅ Pass |
+| Battery Test | ✅ Pass |
+| System Board Test | ✅ Pass |
+| Video Memory Test | ✅ Pass |
+| Wireless Module Test | ✅ Pass |
+
+**Summary**
+
+No hardware faults were detected during HP UEFI diagnostics. The successful completion of CPU, memory, storage, battery, system board, wireless, and video memory tests supports the current hypothesis that the observed kernel crashes are more likely associated with software, driver, or firmware interactions than with failing hardware.
+
 None permanently resolved the issue.
 
 ---
