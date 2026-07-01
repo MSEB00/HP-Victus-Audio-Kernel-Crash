@@ -312,6 +312,14 @@ Crash dump analysis consistently indicates:
 
 The kernel timer subsystem appears to detect previously corrupted memory rather than being the origin of the corruption.
 
+## Hardware diagnostics
+
+Comprehensive HP UEFI diagnostics were performed, including CPU, memory, NVMe SMART, Optimized DST, Short DST, Long DST, system board, battery, wireless module, and video memory tests.
+
+All tests completed successfully with no hardware faults detected.
+
+This further suggests the observed crashes are more likely related to software, driver, firmware, or kernel interactions rather than defective hardware.
+
 ---
 
 ## Current Hypothesis
